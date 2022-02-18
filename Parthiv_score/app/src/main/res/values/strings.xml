@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Parthiv_score</string>
+    <string name="score_keeper">Score Keeper</string>
+    <string name="team_1">Team 1</string>
+    <string name="team_2">Team 2</string>
+    <string name="team1_score">0</string>
+    <string name="team2_score">0</string>
+    <string name="team1_up">+</string>
+    <string name="team1_down">-</string>
+    <string name="team2_up">+</string>
+    <string name="team2_down">-</string>
+    <string name="score_increment">Score Increment</string>
+    <string name="point1">1 Point</string>
+    <string name="point2">2 Point</string>
+    <string name="point3">3 Point</string>
+
+</resources>
