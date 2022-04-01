@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="?attr/bgc"
     tools:context=".MainActivity">
 
+    <!--main heading of application-->
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/score_keeper"
         android:textAlignment="gravity"
-        android:textColor="#424242"
+        android:textColor="?attr/tc"
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,12 +23,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.044" />
 
+    <!--main heading for TEAM 1-->
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/team_1"
-        android:textColor="#B71C1C"
+        android:textColor="?attr/tc"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,12 +38,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.182" />
 
+    <!--main heading for TEAM 2-->
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/team_2"
-        android:textColor="#B71C1C"
+        android:textColor="?attr/tc"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,12 +53,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.182" />
 
+    <!--Score display for TEAM 1-->
     <TextView
         android:id="@+id/t1_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/team1_score"
-        android:textColor="#000000"
+        android:textColor="?attr/tc"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,12 +68,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.351" />
 
+    <!--Score display for TEAM 2-->
     <TextView
         android:id="@+id/t2_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/team2_score"
-        android:textColor="#000000"
+        android:textColor="?attr/tc"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,6 +83,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.351" />
 
+    <!--Increment button for TEAM 1-->
     <Button
         android:id="@+id/inc_team1"
         android:layout_width="71sp"
@@ -91,13 +97,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.254" />
 
+    <!--Decrement button for TEAM 2-->
     <Button
         android:id="@+id/dec_team1"
         android:layout_width="71sp"
         android:layout_height="48sp"
         android:textSize="20sp"
         android:text="@string/team1_down"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.217"
@@ -105,13 +111,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.452" />
 
+    <!--Increment button for TEAM 2-->
     <Button
         android:id="@+id/inc_team2"
         android:layout_width="71sp"
         android:layout_height="48sp"
         android:textSize="20sp"
         android:text="@string/team2_up"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.808"
@@ -119,6 +125,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.254" />
 
+    <!--Decrement button for TEAM 2-->
     <Button
         android:id="@+id/dec_team2"
         android:layout_width="71sp"
@@ -133,7 +140,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.452" />
 
+    <!--Used linear layout to include radio buttons-->
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -148,39 +157,54 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="?attr/tc"
             android:text="@string/score_increment"
-            android:textColor="#000000"
             android:textSize="20sp" />
 
         <RadioGroup
+            android:id="@+id/radio_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="2sp"
-            android:id="@+id/radio_group"
-            android:layout_marginStart="35dp">
+            android:layout_marginStart="35dp"
+            android:padding="2sp">
 
             <RadioButton
                 android:id="@+id/radioButton1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/point1"
-                android:textColor="#000000" />
+                android:textColor="?attr/tc"
+                android:text="@string/point1" />
 
             <RadioButton
                 android:id="@+id/radioButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000000"
+                android:textColor="?attr/tc"
                 android:text="@string/point2" />
 
             <RadioButton
                 android:id="@+id/radioButton3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000000"
+                android:textColor="?attr/tc"
                 android:text="@string/point3" />
         </RadioGroup>
 
     </LinearLayout>
+
+    <!--Switch button to turn on or off dark mode for this application-->
+    <Switch
+        android:id="@+id/mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dark"
+        android:textSize="15sp"
+        android:textColor="?attr/tc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

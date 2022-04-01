@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Declared background color and text color-->
+    <declare-styleable name="dt">
+        <attr name="bgc" format="color" />
+        <attr name="tc" format="color" />
+    </declare-styleable>
+</resources>
