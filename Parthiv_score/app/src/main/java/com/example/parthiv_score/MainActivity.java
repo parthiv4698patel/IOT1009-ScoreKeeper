@@ -1,9 +1,11 @@
 package com.example.parthiv_score;
 
 /* import */
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -11,6 +13,11 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.TextView;
+
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +30,27 @@ public class MainActivity extends AppCompatActivity {
     int team1 =0;
     int team2 =0;
     String t1,t2;
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.score_menu, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.about:
+                Toast.makeText(this, "Created by Parthiv Patel"+"\n"+"Student Id: A00226243"+"\n"+ "Course code: IOT-1009", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.settings:
+                Intent myintent = new Intent(MainActivity.this, NewSettings.class);
+                startActivity(myintent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
 
     /*On create method for Dark mode on and off*/
